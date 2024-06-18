@@ -46,10 +46,10 @@ final class ExoPlayerEventListener implements Player.Listener {
     if (width != 0 && height != 0) {
       int rotationDegrees = videoSize.unappliedRotationDegrees;
       // Switch the width/height if video was taken in portrait mode
-      if (rotationDegrees == 90 || rotationDegrees == 270) {
-        width = videoSize.height;
-        height = videoSize.width;
-      }
+      // if (rotationDegrees == 90 || rotationDegrees == 270) {
+      //   width = videoSize.height;
+      //   height = videoSize.width;
+      // }
       // Rotating the video with ExoPlayer does not seem to be possible with a Surface,
       // so inform the Flutter code that the widget needs to be rotated to prevent
       // upside-down playback for videos with rotationDegrees of 180 (other orientations work
